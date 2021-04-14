@@ -1,0 +1,422 @@
+/**app.wxss**/
+page {
+  box-sizing: border-box;
+  color: #202020;
+  font-size: 24rpx;
+}
+/* 状态栏 */
+.status-box {
+  width: 100%;
+  background: #fff;
+}
+.status-white-noback {
+  background: none;
+}
+
+/* 标题栏 */
+.title-box {
+  width: calc(100% - 230rpx);
+  height: 44px;
+  padding-left: 20rpx;
+  padding-right: 230rpx;
+  box-sizing: border-box;
+  color: #000;
+  font-size: 34rpx;
+}
+.title-box .area-box {
+  height: 100%;
+  line-height: 44rpx;
+}
+.title-box .area-box .text-white {
+  color: #fff;
+}
+.title-box .area-box image {
+  width: 17rpx;
+  height: 30rpx;
+  margin-right: 15rpx;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+
+/* 搜索 智能偏好 */
+.home-header-search {
+  height: 70rpx;
+  margin-bottom: 24rpx;
+  position: relative;
+}
+.home-search-btn {
+  height: 100%;
+  width: 150rpx;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 2;
+  text-align: center;
+  line-height: 70rpx;
+  color: #fff;
+  font-size: 24rpx;
+}
+.home-search-btn image {
+  position: absolute;
+  right: -1rpx;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+.home-search-btn text {
+  position: relative;
+  z-index: 1;
+}
+.home-header-search input{
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 50rpx;
+  padding-left: 70rpx;
+  box-sizing: border-box;
+  font-size: 24rpx;
+}
+.home-search-icon {
+  width: 24rpx;
+  height: 24rpx;
+  position: absolute;
+  top: 50%;
+  margin-top: -12rpx;
+  left: 30rpx;
+  z-index: 1;
+}
+
+/* 搜索filter */
+.home-header-filter {
+  height: 200rpx;
+  background: #fff;
+  border-radius: 12rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+.filter-kind {
+  height: 60rpx;
+  width: 100%;
+  display: flex;
+  color: #202020;
+  font-size: 26rpx;
+}
+.filter-kind-item {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.filter-kind-item-active {
+  color: #015C61;
+}
+.filter-kind-item-line::after {
+  content: '';
+  display: inline-block;
+  width: 1rpx;
+  height: 17rpx;
+  background: #ccc;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -8rpx;
+}
+
+.filter-type {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 78rpx;
+  font-size: 24rpx;
+  color: #8D8D8D;
+}
+.filter-type-item {
+  float: left;
+  padding: 10rpx 18rpx;
+  border: 2rpx solid #8D8D8D;
+  border-radius: 8rpx;
+}
+.filter-type-item-active {
+  color: #015C61;
+  border-color: #015C61;
+}
+
+.divder {
+  height: 1rpx;
+  width: 100%;
+  background: #eee;
+  margin: 12rpx 0;
+}
+
+/* 评分 星星 */
+.score {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  font-size: 24rpx;
+  color: #8d8d8d;
+  margin: 18rpx 0;
+}
+.score .starts {
+  margin-right: 12rpx;
+  overflow: hidden;
+}
+.score .starts-item{
+  float: left;
+  width: 22rpx;
+  height: 26rpx;
+  margin-right: 4rpx;
+}
+.score .starts-item image {
+  height: 100%;
+  width: 100%;
+}
+
+/* 字体颜色 */
+.text-green {
+  color: #015C61;
+}
+.text-gray {
+  color: #8d8d8d;
+}
+.text-org {
+  color: #FF4E1E;
+}
+.text-black {
+  color: #202020;
+}
+.text-bold {
+  font-weight: 600;
+}
+.text-big {
+  font-size: 44rpx;
+}
+
+/* 字 前面放图标 */
+.font-icon {
+  display: inline-block;
+  font-size: 24rpx;
+  color: #8D8D8D;
+}
+.font-icon image {
+  height: 20rpx;
+  width: 20rpx;
+  vertical-align: middle;
+}
+
+/* 分割竖线 */
+.line-split {
+  display: inline-block;
+  height: 14rpx;
+  width: 1rpx;
+  background: #eee;
+  margin: 0 24rpx;
+}
+/* 分割横线 */
+.line-split-hen {
+  height: 1rpx;
+  width: 100%;
+  background: #eee;
+  margin: 24rpx 0;
+}
+
+/* 垂直居中 */
+.align-center {
+  display: flex;
+  align-items: center;
+}
+/* 垂直水平居中 */
+.align-line-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* 垂直水平两端排列 */
+.layout-l-r {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 标签 */
+.tag {
+  display: inline-block;
+  color: #015C61;
+  font-size: 26rpx;
+  padding: 6rpx 18rpx;
+  background: #015c611a;
+  border-radius: 10rpx;
+  line-height: 1;
+}
+.tag-border-back {
+  display: inline-block;
+  font-size: 22rpx;
+  padding: 4rpx 6rpx;
+  background: rgba(255, 78, 30, .1);
+  border-radius: 16rpx;
+  line-height: 1;
+  color: #FF4E1E;
+  border: 1rpx solid #FF4E1E;
+}
+.min-padding {
+  padding-left: 8rpx;
+  padding-right: 8rpx;
+}
+
+.top-18 {
+  margin-top: 18rpx;
+}
+.top-12 {
+  margin-top: 12rpx;
+}
+.top-36 {
+  margin-top: 36rpx;
+}
+.top-24 {
+  margin-top: 24rpx;
+}
+.top-64 {
+  margin-top: 64rpx;
+}
+
+.pr-10 {
+  padding-right: 20rpx;
+}
+
+.pd-24 {
+  padding: 24rpx;
+  box-sizing: border-box;
+}
+
+/* 卡片 */
+.card {
+  border-radius: 12rpx;
+  background: #fff;
+  padding: 24rpx;
+  box-sizing: border-box;
+}
+.clear {
+  clear: both;
+}
+
+/* 文字 > */
+.back {
+  display: flex;
+  align-items: center;
+  text-align: right;
+  color: #8d8d8d;
+}
+.back image {
+  width: 11rpx;
+  height: 18rpx;
+  margin-left: 12rpx;
+  margin-top: 3rpx;
+}
+
+.del-line {
+  text-decoration: line-through;
+}
+
+/* 空闲 百分比 */
+.second-circle-item {
+  display: inline-block;
+  margin-right: 18rpx;
+  margin-bottom: 18rpx;
+  width: 68rpx;
+  height: 68rpx;
+  border: 1rpx solid #01575C;
+  border-radius: 50%;
+  position: relative;
+  font-size: 24rpx;
+  color: #01575C;
+  line-height: 70rpx;
+  text-align: center;
+  overflow: hidden;
+}
+.second-circle-item-no {
+  margin-right: 0;
+}
+.second-circle-item .fill {
+  width: 100%;
+  height: 0;
+  background: rgba(1, 87, 92, .1);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+/* 底部操作栏 */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 98rpx;
+  width: 100%;
+  background: #fff;
+  border-top: 1rpx solid #eee;
+}
+.footer-btn {
+  width: 200rpx;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: #fff;
+  line-height: 98rpx;
+  text-align: center;
+  font-size: 30rpx;
+  font-weight: 500;
+}
+.footer-btn image {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+.footer-empty {
+  height: 99rpx;
+  width: 100%;
+}
+
+.no-m-r {
+  margin-right: 0;
+}
+
+.no-m-l {
+  margin-left: 0;
+}
+
+.btn {
+  display: inline-block;
+  min-width: 332rpx;
+  height: 98rpx;
+  text-align: center;
+  line-height: 98rpx;
+  border-radius: 50rpx;
+  border: 2rpx solid #015C61;
+  font-size: 28rpx;
+  font-weight: 600;
+  letter-spacing: 4rpx;
+}
+.btn-cancel {
+  color: #015C61;
+  background: #fff;
+}
+.btn-confirm {
+  background: linear-gradient(#278F95, #015C61);
+  color: #fff;
+}

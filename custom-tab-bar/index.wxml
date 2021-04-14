@@ -1,0 +1,16 @@
+<!--miniprogram/custom-tab-bar/index.wxml-->
+<view class="tab-bar">
+  <view class="tab-bar-border"></view>
+  <block wx:for="{{list}}" wx:key="index">
+    <view wx:if="{{item.isSpecial}}" class="tab-bar-item" data-path="{{item.pagePath}}" data-click="{{ item.isSpecial || false }}" data-index="{{index}}" bindtap="switchTab">
+      <view class="special-image">
+        <image class="special-image-pic" mode="aspectFit" src="{{selected === index ? item.selectedIconPath : item.iconPath}}"></image>
+      </view>
+      <view style="color: {{selected === index ? selectedColor : color}}" class="special-text tab-text">{{item.text}}</view>
+    </view>
+    <view wx:else class="tab-bar-item" data-path="{{item.pagePath}}" data-click="{{ item.isSpecial }}" data-index="{{index}}" bindtap="switchTab">
+      <image class="item-image" mode="aspectFit" src="{{selected === index ? item.selectedIconPath : item.iconPath}}"></image>
+      <view class="tab-text" style="color: {{selected === index ? selectedColor : color}}">{{item.text}}</view>
+    </view>
+  </block>
+</view>

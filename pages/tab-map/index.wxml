@@ -1,0 +1,46 @@
+<!--pages/tab-map/index.wxml-->
+<!-- 状态栏 -->
+<view class="status-box status-white-noback" style="height:{{navHeight}}px"></view>
+<!-- 标题栏 -->
+<view class="title-box align-center">
+  <view class="area-box align-center">
+    <text class="text-white">安琪拉屎</text>
+  </view>
+</view>
+
+<view class="map-header-back" style="height: {{headHeight}}rpx"></view>
+<view class="map-card">
+  <view class="home-header-search" style="margin: 0">
+    <input type="text" confirm-type="搜索" adjust-position="{{false}}" placeholder="告诉小智你想去哪里" bindconfirm="search"/>
+    <image class="home-search-icon" mode="aspectFit" src="/image/search.png"></image>
+    <view class="home-search-btn" bindtap="goPianhao">
+      <text>智能偏好</text>
+      <image src="/image/home-preference.png" mode="aspectFit"></image>
+    </view>
+  </view>
+</view>
+
+<view class="home-header-filter map-filter-card">
+  <view class="filter-kind">
+    <view class="filter-kind-item filter-kind-item-line filter-kind-item-active">到达最快</view>
+    <view class="filter-kind-item filter-kind-item-line">价格最低</view>
+    <view class="filter-kind-item">距离最近</view>
+  </view>
+  <view class="divder"></view>
+  <view class="filter-type">
+    <view class="filter-type-item filter-type-item-active">快充</view>
+    <view class="filter-type-item">慢充</view>
+    <view class="filter-type-item">小智惠充</view>
+    <view class="filter-type-item">免费停车</view>
+    <view class="filter-type-item">洗手间</view>
+  </view>
+</view>
+
+<map
+  id="myMap"
+  style="width: 100%; height: {{mapHeight}}rpx;"
+  latitude="{{latitude}}"
+  longitude="{{longitude}}"
+  markers="{{markers}}"
+  show-location
+></map>

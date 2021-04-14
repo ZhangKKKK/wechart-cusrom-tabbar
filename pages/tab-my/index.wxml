@@ -1,0 +1,11 @@
+<!--pages/tab-my/index.wxml-->
+<!-- 状态栏 -->
+<view class="status-box status-white-noback" style="height:{{navHeight}}px"></view>
+<!-- 标题栏 -->
+<view class="title-box align-center">
+  <view class="area-box align-center">
+    <text class="text-white">我的</text>
+  </view>
+</view>
+
+<view class="my-header-bg" style="height: {{headHeight}} rpx"></view>
